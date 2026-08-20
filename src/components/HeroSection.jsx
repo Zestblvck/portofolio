@@ -58,7 +58,7 @@ export default function HeroSection() {
           </div>
           
           <p className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
-            Disponible dès <span className="text-sky-600 underline decoration-sky-300 underline-offset-4">Octobre 2026</span> • Temps plein en entreprise dès <span className="text-emerald-700 underline decoration-emerald-300 underline-offset-4">Février 2027</span>
+            Disponible dès <span className="text-sky-600 underline decoration-sky-300 underline-offset-4">Septembre 2026</span> • Temps plein en entreprise dès <span className="text-emerald-700 underline decoration-emerald-300 underline-offset-4">Février 2027</span>
           </p>
 
           {/* Planning breakdown card */}
@@ -81,7 +81,7 @@ export default function HeroSection() {
             <div className="space-y-2 pt-1 border-t border-sky-200/60">
               <div className="flex items-center gap-2 text-xs text-slate-700 font-medium">
                 <Clock className="w-3.5 h-3.5 text-sky-600 shrink-0" />
-                <span>Oct. - Déc. 2026 : 3 sem. entreprise / 3 sem. école</span>
+                <span>Début Septembre 2026 : 3 sem. entreprise / 3 sem. école</span>
               </div>
               
               {planningOpen && (

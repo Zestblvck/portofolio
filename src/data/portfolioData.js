@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Zakariae MEZIANE",
   title: "Étudiant en 3ème année du cycle ingénieur à l'ESIR",
   subtitle: "Ingénierie des Systèmes d'Information | Fullstack • DevOps • Data • Testing",
-  status: "À la recherche d'une alternance pour la rentrée 2026-2027",
+  status: "À la recherche d'une alternance pour la rentrée 2026-2027 (dès Septembre 2026)",
   location: "Rennes, France",
   driverLicense: "Permis B (Véhiculé)",
   email: "zakariaemeziane@outlook.fr",
@@ -13,14 +13,14 @@ export const personalInfo = {
     "Je m'appelle Zakariae MEZIANE, je suis actuellement étudiant en 3ème année du cycle ingénieur à l'ESIR (École Supérieure d'Ingénierie de Rennes), spécialité Systèmes d'Information.",
     "Passionné par les technologies du numérique depuis plusieurs années, j'ai suivi un parcours scientifique exigeant comprenant des Classes Préparatoires aux Grandes Écoles (CPGE) en Mathématiques et Physique (MP). Cette formation m'a transmis une grande rigueur analytique et une méthode de travail structurée.",
     "Fort de mes expériences en stage (Développement Fullstack chez AB RENOV, Développement Web au CHU Mohammed VI) et de mes projets académiques et personnels (SaaS ApplyTrack avec LLM, Plateforme DevOps avec IaC & Chaos Engineering, Analyse Data BI), je maîtrise l'ensemble du cycle de vie des applications.",
-    "Titulaire du Permis B et véhiculé, je suis disponible à partir d'octobre 2026 pour une alternance selon un rythme mixte se concluant par un temps plein en entreprise dès février 2027."
+    "Titulaire du Permis B et véhiculé, je suis disponible dès septembre 2026 pour une alternance se concluant par une présence à temps plein en entreprise dès février 2027."
   ],
   interests: ["Guitare", "Photoshop & Illustrator", "Design de Logos & Flyers", "Dessin, Graffiti & Street Art", "Football"]
 };
 
 export const alternanceRythm = {
-  startDate: "À partir d'octobre 2026",
-  fulltimeDate: "Temps plein à partir de Février 2027",
+  startDate: "Dès Septembre 2026",
+  fulltimeDate: "Temps plein dès Février 2027",
   steps: [
     "3 semaines en entreprise / 3 semaines à l'école",
     "puis 3 semaines en entreprise / 5 semaines à l'école",
