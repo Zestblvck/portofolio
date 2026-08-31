@@ -1,3 +1,4 @@
+// Updated portfolio data
 export const personalInfo = {
   name: "Zakariae MEZIANE",
   title: "Étudiant en 3ème année du cycle ingénieur à l'ESIR",
