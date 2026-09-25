@@ -1,56 +1,55 @@
 import React from 'react';
 import { education } from '../data/portfolioData';
-import { GraduationCap, MapPin, Award } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar } from 'lucide-react';
 
 export default function EducationSection() {
   return (
-    <section id="formation" className="py-20 bg-white relative border-t border-sky-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-20 bg-white border-t border-neutral-200/60">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Title */}
-        <div className="mb-12">
-          <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">
-            Ma formation<span className="text-sky-600">.</span>
+        {/* Section Header */}
+        <div className="mb-12 text-left">
+          <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500 font-mono">Diplômes</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1d1d1f] tracking-tight mt-1">
+            Formation académique.
           </h2>
-          <p className="text-slate-500 text-sm mt-1">
-            Parcours scientifique et études supérieures en ingénierie.
-          </p>
-          <div className="w-12 h-1 bg-sky-500 rounded-full mt-2" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {education.map((item, idx) => (
+          {education.map((edu, idx) => (
             <div
               key={idx}
-              className="card-minimal p-6 rounded-3xl space-y-3 border border-sky-100 card-minimal-hover"
+              className="p-6 rounded-3xl card-apple text-left space-y-3 border border-neutral-200/80 flex flex-col justify-between"
             >
-              <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-mono text-xs font-bold border border-sky-200">
-                  {item.period}
-                </span>
-                <span className="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
-                  {item.badge}
-                </span>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="px-3 py-1 rounded-full bg-neutral-900 text-white text-xs font-medium">
+                    {edu.badge}
+                  </span>
+                  <span className="text-xs text-neutral-500 font-medium flex items-center gap-1">
+                    <Calendar className="w-3.5 h-3.5" />
+                    {edu.period}
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="text-base font-bold text-[#1d1d1f]">
+                    {edu.degree}
+                  </h3>
+                  <div className="text-xs font-semibold text-neutral-700 mt-0.5">
+                    {edu.institution}
+                  </div>
+                </div>
+
+                <p className="text-xs text-[#515154] leading-relaxed">
+                  {edu.details}
+                </p>
               </div>
 
-              <h3 className="text-xl font-bold font-display text-slate-900">
-                {item.degree}
-              </h3>
-
-              <div className="text-sm font-bold text-sky-700 flex items-center gap-1.5">
-                <GraduationCap className="w-4 h-4 text-sky-600" />
-                <span>{item.institution}</span>
-                <span className="text-slate-400">•</span>
-                <span className="text-slate-500 text-xs font-normal flex items-center gap-1">
-                  <MapPin className="w-3 h-3 text-slate-400" />
-                  {item.location}
-                </span>
+              <div className="flex items-center gap-1.5 text-[11px] text-[#86868b] pt-2 border-t border-neutral-100">
+                <MapPin className="w-3.5 h-3.5 text-neutral-400" />
+                <span>{edu.location}</span>
               </div>
-
-              <p className="text-xs text-slate-600 leading-relaxed pt-1">
-                {item.details}
-              </p>
-
             </div>
           ))}
         </div>

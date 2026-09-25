@@ -1,84 +1,67 @@
 import React from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { MapPin, Car, Calendar } from 'lucide-react';
+import { User, MapPin, Award, CheckCircle } from 'lucide-react';
 
 export default function AboutSection() {
   return (
-    <section id="a_propos" className="py-20 bg-white relative border-t border-sky-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-white border-t border-neutral-200/60">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Title */}
-        <div className="mb-12">
-          <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">
-            À propos<span className="text-sky-600">.</span>
-          </h2>
-          <div className="w-12 h-1 bg-sky-500 rounded-full mt-2" />
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
           
-          {/* Left Text Content */}
-          <div className="lg:col-span-8 space-y-4 text-slate-700 text-base leading-relaxed">
-            {personalInfo.aboutParagraphs.map((para, idx) => (
-              <p key={idx} className={idx === 0 ? "font-bold text-slate-900 text-lg" : ""}>
-                {para}
-              </p>
-            ))}
-
-            {/* Key Strengths Pills */}
-            <div className="pt-4 flex flex-wrap gap-2">
-              <span className="badge-sky">Permis B (Véhiculé)</span>
-              <span className="badge-sky">Rigueur Mathématique & Analytique</span>
-              <span className="badge-sky">Polyvalence Fullstack & DevOps</span>
-              <span className="badge-sky">Data & Business Intelligence</span>
-              <span className="badge-sky">Esprit d'équipe & Communication</span>
+          {/* Avatar Column */}
+          <div className="md:col-span-4 flex justify-center">
+            <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-3xl p-1 bg-gradient-to-b from-neutral-200 to-neutral-300 shadow-sm overflow-hidden">
+              <img
+                src="/photo_zm.jpg"
+                alt={personalInfo.name}
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
           </div>
 
-          {/* Right Highlight Box with Photo */}
-          <div className="lg:col-span-4">
-            <div className="card-minimal p-6 rounded-3xl space-y-6 border border-sky-200 shadow-md text-center group">
-              
-              {/* Zakariae's Photo */}
-              <div className="relative w-36 h-36 mx-auto rounded-3xl p-1 bg-gradient-to-tr from-sky-400 via-blue-500 to-purple-500 shadow-lg group-hover:scale-105 transition-transform duration-300">
-                <img
-                  src="/photo_zm.jpg"
-                  alt={personalInfo.name}
-                  className="w-full h-full object-cover rounded-[22px]"
-                />
-              </div>
-
-              <div className="space-y-1">
-                <h3 className="font-bold text-slate-900 text-lg">{personalInfo.name}</h3>
-                <p className="text-xs font-semibold text-sky-700">ESIR Rennes • 3ᵉ année SI</p>
-                <p className="text-xs text-slate-500 flex items-center justify-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 text-sky-600" />
-                  Rennes, France
-                </p>
-              </div>
-
-              <div className="pt-4 border-t border-sky-100 space-y-3 text-xs text-slate-600 text-left">
-                <div className="flex items-center justify-between">
-                  <span className="font-semibold text-slate-800">Permis :</span>
-                  <span className="text-emerald-700 font-bold flex items-center gap-1">
-                    <Car className="w-3.5 h-3.5" /> Permis B (Véhiculé)
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="font-semibold text-slate-800">Rythme :</span>
-                  <span className="text-sky-700 font-bold">Alternance ESIR 2026-2027</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="font-semibold text-slate-800">Temps plein :</span>
-                  <span className="text-emerald-700 font-bold">Dès Février 2027</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="font-semibold text-slate-800">Baccalauréat :</span>
-                  <span className="text-sky-700 font-bold">Mention Très Bien</span>
-                </div>
-              </div>
-
+          {/* Bio Content Column */}
+          <div className="md:col-span-8 space-y-6 text-left">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500 font-mono">À propos</span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1d1d1f] tracking-tight mt-1">
+                Présentation.
+              </h2>
             </div>
+
+            <div className="space-y-4 text-sm sm:text-base text-[#515154] leading-relaxed">
+              {personalInfo.aboutParagraphs.map((paragraph, idx) => (
+                <p key={idx}>{paragraph}</p>
+              ))}
+            </div>
+
+            {/* Quick Badges */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+              <div className="p-3.5 rounded-2xl bg-neutral-50 border border-neutral-200/60 flex items-center gap-3">
+                <User className="w-4 h-4 text-neutral-700 shrink-0" />
+                <div>
+                  <div className="text-xs font-bold text-neutral-900">3ᵉ année ESIR</div>
+                  <div className="text-[11px] text-neutral-500">Rennes, France</div>
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-neutral-50 border border-neutral-200/60 flex items-center gap-3">
+                <Award className="w-4 h-4 text-neutral-700 shrink-0" />
+                <div>
+                  <div className="text-xs font-bold text-neutral-900">CPGE MP</div>
+                  <div className="text-[11px] text-neutral-500">Maths & Physique</div>
+                </div>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-neutral-50 border border-neutral-200/60 flex items-center gap-3">
+                <CheckCircle className="w-4 h-4 text-neutral-700 shrink-0" />
+                <div>
+                  <div className="text-xs font-bold text-neutral-900">Contrat de Pro</div>
+                  <div className="text-[11px] text-neutral-500">2026 – 2027</div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>

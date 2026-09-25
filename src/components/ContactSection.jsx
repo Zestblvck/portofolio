@@ -1,99 +1,86 @@
 import React from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { Mail, Phone, MapPin, Sparkles, ExternalLink, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Car } from 'lucide-react';
 import { LinkedinIcon } from './BrandIcons';
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-slate-50 relative border-t border-sky-100">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 bg-white border-t border-neutral-200/60">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10">
         
-        {/* Section Title */}
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs font-bold">
-            <Sparkles className="w-3.5 h-3.5 text-sky-600" />
-            <span>Disponible pour Alternance 2026-2027</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">
-            Me contacter<span className="text-sky-600">.</span>
+        {/* Section Header */}
+        <div>
+          <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500 font-mono">Opportunités</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#1d1d1f] tracking-tight mt-1">
+            Restons en contact.
           </h2>
-          <p className="text-slate-600 text-sm">
-            Un projet ou une opportunité d'alternance ? N'hésitez pas à me contacter directement via l'un des moyens ci-dessous.
+          <p className="text-base text-[#86868b] max-w-xl mx-auto mt-3">
+            À la recherche d'un <span className="font-semibold text-neutral-900">Contrat de Professionnalisation (2026 – 2027)</span> en Data Engineering, Fullstack ou DevOps.
           </p>
-          <div className="w-12 h-1 bg-sky-500 rounded-full mx-auto mt-3" />
         </div>
 
-        {/* Direct Contact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Direct Action Contact Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 text-left">
           
-          {/* Card 1: Email */}
+          {/* Email Card */}
           <a
-            href={`mailto:${personalInfo.email}?subject=Proposition%20d'alternance%20-%20Zakariae%20MEZIANE`}
-            className="card-minimal rounded-3xl p-6 border border-sky-100 hover:border-sky-300 card-minimal-hover group text-center space-y-3"
+            href={`mailto:${personalInfo.email}`}
+            className="p-6 rounded-3xl card-apple border border-neutral-200/80 space-y-3 hover:border-black/20 transition-all block group"
           >
-            <div className="w-12 h-12 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-              <Mail className="w-6 h-6" />
+            <div className="w-10 h-10 rounded-2xl bg-neutral-900 text-white flex items-center justify-center group-hover:scale-105 transition-transform">
+              <Mail className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-slate-400 uppercase font-mono tracking-wider">Email Direct</div>
-              <div className="text-sm font-bold text-slate-900 group-hover:text-sky-600 transition-colors pt-1">
-                {personalInfo.email}
-              </div>
-            </div>
-            <div className="pt-2 inline-flex items-center gap-1 text-xs font-bold text-sky-600">
-              <span>Envoyer un email</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              <div className="text-xs font-medium text-neutral-500">Adresse Email</div>
+              <div className="text-sm font-bold text-neutral-900 truncate mt-0.5">{personalInfo.email}</div>
             </div>
           </a>
 
-          {/* Card 2: Phone */}
+          {/* Phone Card */}
           <a
             href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`}
-            className="card-minimal rounded-3xl p-6 border border-blue-100 hover:border-blue-300 card-minimal-hover group text-center space-y-3"
+            className="p-6 rounded-3xl card-apple border border-neutral-200/80 space-y-3 hover:border-black/20 transition-all block group"
           >
-            <div className="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-              <Phone className="w-6 h-6" />
+            <div className="w-10 h-10 rounded-2xl bg-neutral-900 text-white flex items-center justify-center group-hover:scale-105 transition-transform">
+              <Phone className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-slate-400 uppercase font-mono tracking-wider">Téléphone</div>
-              <div className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition-colors pt-1">
-                {personalInfo.phone}
-              </div>
-            </div>
-            <div className="pt-2 inline-flex items-center gap-1 text-xs font-bold text-blue-600">
-              <span>Appeler / SMS</span>
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+              <div className="text-xs font-medium text-neutral-500">Téléphone Direct</div>
+              <div className="text-sm font-bold text-neutral-900 mt-0.5">{personalInfo.phone}</div>
             </div>
           </a>
 
-          {/* Card 3: LinkedIn */}
+          {/* LinkedIn Card */}
           <a
             href={personalInfo.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="card-minimal rounded-3xl p-6 border border-indigo-100 hover:border-indigo-300 card-minimal-hover group text-center space-y-3"
+            className="p-6 rounded-3xl card-apple border border-neutral-200/80 space-y-3 hover:border-black/20 transition-all block group"
           >
-            <div className="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform">
-              <LinkedinIcon className="w-6 h-6" />
+            <div className="w-10 h-10 rounded-2xl bg-neutral-900 text-white flex items-center justify-center group-hover:scale-105 transition-transform">
+              <LinkedinIcon className="w-5 h-5" />
             </div>
             <div>
-              <div className="text-xs font-bold text-slate-400 uppercase font-mono tracking-wider">LinkedIn</div>
-              <div className="text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors pt-1">
-                linkedin.com/in/zmeziane
+              <div className="text-xs font-medium text-neutral-500">Profil LinkedIn</div>
+              <div className="text-sm font-bold text-neutral-900 mt-0.5 flex items-center gap-1">
+                <span>linkedin.com/in/zmeziane</span>
+                <ExternalLink className="w-3.5 h-3.5 text-neutral-400" />
               </div>
-            </div>
-            <div className="pt-2 inline-flex items-center gap-1 text-xs font-bold text-indigo-600">
-              <span>Voir mon profil</span>
-              <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </div>
           </a>
 
         </div>
 
-        {/* Location Banner */}
-        <div className="mt-8 p-4 rounded-2xl card-minimal text-center text-xs font-medium text-slate-600 flex items-center justify-center gap-2 border border-sky-100">
-          <MapPin className="w-4 h-4 text-sky-600" />
-          <span>Basé à Rennes, France • Ouvert aux opportunités en présentiel ou hybride</span>
+        {/* Location & License Badge */}
+        <div className="p-4 rounded-2xl bg-neutral-50 border border-neutral-200/60 inline-flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-neutral-700">
+          <span className="flex items-center gap-1.5">
+            <MapPin className="w-4 h-4 text-neutral-500" />
+            Rennes, France & Mobilité nationale
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Car className="w-4 h-4 text-neutral-500" />
+            Permis B (Véhiculé)
+          </span>
         </div>
 
       </div>
